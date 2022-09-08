@@ -5,9 +5,9 @@ using namespace std;
 /////////////////////// sorting function
 void bubbleSort(int arr[], int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) 
         for (int j = 0; j < n; j++)
-            if (arr[j] > arr[j + 1])
+            if (arr[j] > arr[j + 1]) //swaps elements every time they are in wrong order
             {
                 int tmp = arr[j];
                 arr[j] = arr[j+1];
