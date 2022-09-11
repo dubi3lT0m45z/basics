@@ -7,9 +7,9 @@ void primeFactors(int n)
 {
     int a = 2;
     
-    while(n > 1)
+    while(n > 1) 
     {
-        while(n % a == 0)
+        while(n % a == 0) //looks for divisors
         {
             n /= a;
             cout << a << "\t";
@@ -18,7 +18,7 @@ void primeFactors(int n)
         a++;
     }
 
-    if(n != 1)
+    if(n != 1)  //if given number was prime number it will be shown
         cout << n;
 } 
 //////////////////////////
