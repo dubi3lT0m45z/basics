@@ -2,13 +2,11 @@
 #include <iostream>
 using namespace std;
 
+/////////////////////////function
 void primeFactors(int n)
 {
     int a = 2;
-
-    if(n == 1)
-        cout << n;
-
+    
     while(n > 1)
     {
         while(n % a == 0)
@@ -23,12 +21,13 @@ void primeFactors(int n)
     if(n != 1)
         cout << n;
 } 
+//////////////////////////
   
 int main()
 {
-    int n = 18;
+    int n = 18; //number used in function
   
-    primeFactors(n);
+    primeFactors(n); //using function
   
     return 0; 
 }
