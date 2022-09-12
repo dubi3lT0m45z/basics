@@ -1,7 +1,8 @@
+//algorithm to get greatest common divisor of given numbers in C++
 #include <iostream>
 using namespace std;
 
-////////////////// ready function
+//////////////////ready function
 void GCD(int a, int b)
 {
     while(a != b)
@@ -17,7 +18,7 @@ void GCD(int a, int b)
 
 int main()
 {
-    int a = 423, b = 234;
+    int a = 423, b = 234; //numbers used in function
 
     GCD(a, b);
 
