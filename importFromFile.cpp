@@ -10,10 +10,18 @@ int import(int arr[], string filename) //requires (array to operate on; name of 
     int i = 0;
 
     file.open(filename, ios::in);
-        while (!file.eof())
+        if(!file.good()) //if file was not found the program will warn about it
         {
-            file >> arr[i];
-            i++;
+            cout << "File not found";
+            return 0;
+        }
+        else
+        {
+            while (!file.eof())
+            {
+                file >> arr[i];
+                i++;
+            }
         }
     file.close();
 
