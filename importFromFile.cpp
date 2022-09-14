@@ -1,8 +1,10 @@
+//Algorithm for importing given amount of numbers from .txt file in C++
 #include <iostream>
 #include <fstream>
 using namespace std;
 
-int import(int arr[], string filename)
+//////////////////////////////////////////function for importing
+int import(int arr[], string filename) //requires (array to operate on; name of the file we are importing from)
 {
     fstream file;
     int i = 0;
@@ -15,23 +17,24 @@ int import(int arr[], string filename)
         }
     file.close();
 
-    return i;
+    return i; //returns the exact size of array
 }
+/////////////////////////////////////////
 
 int main()
 {
-    int size = 30;
-    int arr[size];
-    int n;
+    int sizeMAX = 30; //maximal size of array, if file has more numbers than given then the variable must be changed
+    int arr[sizeMAX];
+    int size;
     string filename;
 
     cout << "What is your file's name? ";
-    cin >> filename;
+    cin >> filename; //question for files name, must be with its extension
 
-    n = import(arr, filename);
+    size = import(arr, filename); //imports to array and changes its exact size
 
-    for(int i = 0; i < n; i++)
-        cout << i+1 << ". " << arr[i] << "\n";
+    for(int i = 0; i < size; i++)
+        cout << i+1 << ". " << arr[i] << "\n"; //reads numbers from array
 
     return 0;
 }
