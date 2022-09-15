@@ -1,7 +1,9 @@
+//Algorithm for writing numbers to file in C++
 #include <iostream>
 #include <fstream>
 using namespace std;
 
+///////////////////////////////////////////////////////////////////////function for random numbers
 void exportToFileRandom(string fileName, int quantity, int min, int max)
 {
     fstream file;
@@ -11,12 +13,14 @@ void exportToFileRandom(string fileName, int quantity, int min, int max)
     file.open(fileName, ios::out);
         for(int i = 0; i < quantity; i ++)
         {
-            n = min+rand()%(max-min+1);
+            n = min+rand()%(max-min+1); //generates random integer numbers
             file << n << "\n";
         }
     file.close();
 }
+////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////function for your own numbers
 void exportToFileWritten(string fileName, int quantity)
 {
     fstream file;
@@ -31,6 +35,7 @@ void exportToFileWritten(string fileName, int quantity)
         }
     file.close();
 }
+/////////////////////////////////////////////////////////////////////////
 
 int main()
 {
@@ -38,7 +43,7 @@ int main()
     int quantity, min, max;
 
     cout << "How you want to call new file? ";
-    cin >> fileName;
+    cin >> fileName; //giving new file its name
 
     do
     {
@@ -48,21 +53,21 @@ int main()
     }while(q1 != "R" && q1 != "W");
     
     cout << "How many numbers do you want in file?\n";
-    cin >> quantity;
+    cin >> quantity; //amount of numbers that will be in file
 
     if(q1 == "R")
     {
         cout << "Minimal number: ";
-        cin >> min;
+        cin >> min; //minimal possible number if chosen random
 
         cout << "Maximal number: ";
-        cin >> max;
+        cin >> max; //maximal possible number if chosen random
     }
 
     if(q1 == "R")
-        exportToFileRandom(fileName, quantity, min, max);
+        exportToFileRandom(fileName, quantity, min, max); //makes the numbers random
     else
-        exportToFileWritten(fileName, quantity);
+        exportToFileWritten(fileName, quantity); //makes you to write every number
 
     return 0;
 }
