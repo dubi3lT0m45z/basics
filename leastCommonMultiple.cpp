@@ -1,6 +1,8 @@
+//algorithm for lest common multiple in C++
 #include <iostream>
 using namespace std;
 
+///////////////////////function for least common multiple
 void LCM(int x, int y)
 {
     int lcm;
@@ -15,6 +17,7 @@ void LCM(int x, int y)
 
     cout << "Least common multiplication of given numbers is: " << lcm;
 }
+////////////////////////
 
 int main()
 {
